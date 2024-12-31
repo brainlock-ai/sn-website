@@ -1,22 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import background from "../assets/background.svg";
+import Brand from "../components/Brand.astro";
+import Chat from "../components/Chat.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div id="container">
+	<div id="page-container">
 		<img id="background" src={background.src} alt="" fetchpriority="high" />
-		<main>
-			<section id="hero">
-				<h1>Brainlock AI</h1>
-				<code>
-					btcli subnet register --wallet.name miner --wallet.hotkey
-					miner --subtensor.network finney --netuid 55
-				</code>
-			</section>
-		</main>
+		<Brand />
+		<Chat />
 	</div>
 </Layout>
+
+<script>
+	const btn = document.querySelector("#cta-button");
+
+	btn?.addEventListener("click", () => {
+		document.querySelector("#presentation")?.scrollIntoView({
+			behavior: "smooth",
+		});
+	});
+</script>
 
 <style>
 	#background {
@@ -29,60 +34,9 @@ import background from "../assets/background.svg";
 		filter: blur(120px);
 	}
 
-	#container {
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
+	#page-container {
 		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
 		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	pre {
-		font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-			Consolas, "DejaVu Sans Mono", monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%)
-				border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
+		min-height: 100vh;
 	}
 </style>
