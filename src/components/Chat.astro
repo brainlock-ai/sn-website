@@ -1,0 +1,212 @@
+<section id="presentation">
+    <aside class="sidebar">
+        <h3>Chat history</h3>
+        <div class="today">
+            <h4>Today</h4>
+            <div class="message">
+                <p>Brainlock model question</p>
+            </div>
+            <div class="message">
+                <p>Brainlock's privacy</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="presentation-main">
+        <header class="topbar">
+            <h4 class="encrypted">Encrypted</h4>&nbsp;
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+                ><path
+                    d="M420-360h120l-23-129q20-10 31.5-29t11.5-42q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 23 11.5 42t31.5 29l-23 129Zm60 280q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"
+                ></path></svg
+            >
+        </header>
+        <div class="chat">
+            <div class="convo">
+                <div class="question">How does this chat model work?</div>
+                <div class="answer">
+                    This model is a large language model trained on vast amounts
+                    of text. It's designed to understand language patterns and
+                    produce coherent answers.
+                    <br />
+                    <br />
+                    The setup works like this:
+                    <br />
+                    <ol>
+                        <li>
+                            <strong>Tokenizing and encrypting:</strong> Your message
+                            is first broken into small text pieces called tokens,
+                            then encrypted on your device so no one else can read
+                            it.
+                        </li>
+                        <li>
+                            <strong>Decentralized processing:</strong> These encrypted
+                            tokens go to a network of computers (the Bittensor blockchain)
+                            for processing. The model works on the encrypted data,
+                            never seeing your actual words.
+                        </li>
+                        <li>
+                            <strong>Encrypted response:</strong> The model's reply
+                            comes back to you in encrypted form. Only you hold the
+                            key to decrypt it, restoring the readable text.
+                        </li>
+                    </ol>
+                    This ensures your privacy while still giving you the model's
+                    best possible answer.
+                </div>
+            </div>
+
+            <div class="convo">
+                <div class="question">Is Brainlock chat 100% private?</div>
+                <div class="answer">
+                    Yes, Brainlock chat is encrypted end-to-end. This means that
+                    your messages are encrypted on your device and only you can
+                    decrypt them. The model never sees your actual messages,
+                    only the encrypted tokens. This ensures that your privacy is
+                    protected at all times.
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="placeholder">Ask your question here</div>
+                <div class="buttons">
+                    <svg
+                        class="input-box-rocket"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#e8eaed"
+                        ><path
+                            d="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm178-65q-23-23-23-56.5t23-56.5q23-23 57-23t57 23q23 23 23 56.5T660-541q-23 23-57 23t-57-23Zm19 321 84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z"
+                        ></path></svg
+                    >
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+
+<style>
+    #presentation {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #171717;
+        color: #fff;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .sidebar h3 {
+        margin: 0 0 3rem 0;
+    }
+
+    .presentation-main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        color: #000;
+        box-sizing: border-box;
+    }
+
+    .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        height: 60px;
+        background-color: #171717;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+        padding: 2rem 4rem 10rem 2rem;
+        gap: 2rem;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .convo {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .question {
+        display: flex;
+        align-self: flex-end;
+        width: 50%;
+        min-height: 40px;
+    }
+
+    .question,
+    .answer {
+        margin: 0.5rem 0;
+        padding: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .answer {
+        background-color: white;
+        max-width: 70%;
+    }
+
+    .input-box {
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-self: center;
+        width: 100%;
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 6px;
+        height: 60px;
+    }
+
+    .input-box .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .question,
+    .input-box {
+        background-color: #424242;
+        color: #ffffffe1;
+    }
+
+    .question,
+    .input-box,
+    .answer {
+        border-radius: 1rem;
+        max-width: 700px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+</style>
